@@ -1,0 +1,23 @@
+{
+  "uiData": {
+    "mode": "CUSTOM",
+    "conditions": [
+      {
+        "input": "location",
+        "col": "age",
+        "num": 0,
+        "operator": "contains"
+      }
+    ]
+  },
+  "expression": "strval(\u0027location\u0027) \u003d\u003d \u0027${high_chol_location}\u0027 \u0026\u0026 val(\u0027age\u0027) \u003d\u003d ${age}",
+  "$status": {
+    "validated": true,
+    "fullyTranslated": true,
+    "ok": true,
+    "message": "Unknown DSS variable: high_chol_location",
+    "sql": "(\"location\" \u003d \u0027Switzerland\u0027) AND (\"age\" \u003d 40)"
+  },
+  "distinct": false,
+  "enabled": true
+}

@@ -1,0 +1,304 @@
+{
+  "computedColumns": [],
+  "enableAutoCastInJoinConditions": false,
+  "engineParams": {
+    "hive": {
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL",
+      "hiveconf": [],
+      "inheritConf": "default",
+      "skipPrerunValidate": false
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "executionEngine": "SPARK_SUBMIT",
+      "overwriteOutputSchema": false,
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "autoModeRepartitionInto": 10,
+        "map": {},
+        "mode": "AUTO"
+      },
+      "skipPrerunValidate": false,
+      "sparkConfig": {
+        "conf": [],
+        "inheritConf": "default"
+      },
+      "useGlobalMetastore": false
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    }
+  },
+  "joins": [
+    {
+      "conditionsMode": "AND",
+      "on": [
+        {
+          "caseInsensitive": false,
+          "column1": {
+            "name": "location",
+            "table": 0
+          },
+          "column2": {
+            "name": "location",
+            "table": 1
+          },
+          "dateDiffUnit": "DAY",
+          "maxDistance": 0,
+          "maxMatches": 1,
+          "normalizeText": false,
+          "strict": false,
+          "type": "EQ"
+        }
+      ],
+      "outerJoinOnTheLeft": true,
+      "rightLimit": {
+        "decisionColumn": {},
+        "enabled": false,
+        "maxMatches": 1,
+        "type": "KEEP_LARGEST"
+      },
+      "table1": 0,
+      "table2": 1,
+      "type": "LEFT"
+    }
+  ],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "location",
+            "type": "string"
+          },
+          {
+            "name": "age",
+            "type": "double"
+          },
+          {
+            "name": "sex",
+            "type": "double"
+          },
+          {
+            "name": "cp",
+            "type": "double"
+          },
+          {
+            "name": "trestbps",
+            "type": "double"
+          },
+          {
+            "name": "chol",
+            "type": "double"
+          },
+          {
+            "name": "fbs",
+            "type": "double"
+          },
+          {
+            "name": "restecg",
+            "type": "double"
+          },
+          {
+            "name": "thalach",
+            "type": "double"
+          },
+          {
+            "name": "exang",
+            "type": "double"
+          },
+          {
+            "name": "oldpeak",
+            "type": "double"
+          },
+          {
+            "name": "risk_level",
+            "type": "bigint"
+          },
+          {
+            "name": "at_risk",
+            "type": "bigint"
+          },
+          {
+            "name": "age_avg",
+            "type": "double"
+          },
+          {
+            "name": "cp_avg",
+            "type": "double"
+          },
+          {
+            "name": "trestbps_avg",
+            "type": "double"
+          },
+          {
+            "name": "chol_avg",
+            "type": "double"
+          },
+          {
+            "name": "thalach_avg",
+            "type": "double"
+          },
+          {
+            "name": "oldpeak_avg",
+            "type": "double"
+          },
+          {
+            "name": "mode_fbs",
+            "type": "double"
+          },
+          {
+            "name": "mode_restecg",
+            "type": "double"
+          },
+          {
+            "name": "mode_exang",
+            "type": "double"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
+  "selectedColumns": [
+    {
+      "name": "location",
+      "table": 0,
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "sex",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "cp",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "trestbps",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "chol",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "fbs",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "restecg",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "thalach",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "exang",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "oldpeak",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "risk_level",
+      "table": 0,
+      "type": "bigint"
+    },
+    {
+      "name": "at_risk",
+      "table": 0,
+      "type": "bigint"
+    },
+    {
+      "name": "age_avg",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "cp_avg",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "trestbps_avg",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "chol_avg",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "thalach_avg",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "oldpeak_avg",
+      "table": 0,
+      "type": "double"
+    },
+    {
+      "name": "fbs",
+      "table": 1,
+      "type": "double"
+    },
+    {
+      "name": "restecg",
+      "table": 1,
+      "type": "double"
+    },
+    {
+      "name": "exang",
+      "table": 1,
+      "type": "double"
+    }
+  ],
+  "virtualInputs": [
+    {
+      "autoSelectColumns": false,
+      "computedColumns": [],
+      "index": 0,
+      "outputColumnsSelectionMode": "MANUAL",
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      }
+    },
+    {
+      "autoSelectColumns": false,
+      "computedColumns": [],
+      "index": 1,
+      "outputColumnsSelectionMode": "MANUAL",
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "prefix": "mode"
+    }
+  ]
+}

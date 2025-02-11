@@ -1,0 +1,39 @@
+{
+  "checklists": {
+    "checklists": []
+  },
+  "columnNumber": 36,
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "darien"
+    },
+    "lastModifiedOn": 1621003119933,
+    "versionNumber": 0
+  },
+  "customFields": {},
+  "listed": true,
+  "name": "DKU_EXAM_DEVELOPER's default dashboard",
+  "owner": "darien",
+  "pages": [
+    {
+      "enableCrossFilters": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
+      },
+      "grid": {
+        "tiles": []
+      },
+      "id": "YNRDwzW",
+      "showTitle": false
+    }
+  ],
+  "showGrid": true,
+  "tags": [],
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "darien"
+    },
+    "lastModifiedOn": 1621003119933,
+    "versionNumber": 0
+  }
+}

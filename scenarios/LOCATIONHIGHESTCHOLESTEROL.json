@@ -1,0 +1,78 @@
+{
+  "type": "step_based",
+  "name": "Location-Highest-Cholesterol",
+  "active": false,
+  "runAsUser": "quka183747@gmail.com",
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [],
+  "reporters": [],
+  "params": {
+    "steps": [
+      {
+        "id": "custom_python_N60p1TkrjZgeIOcM7taskg",
+        "type": "custom_python",
+        "name": "Update Location with Highest Cholesterol",
+        "enabled": true,
+        "alwaysShowComment": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "script": "import dataiku\nimport pandas as pd\n\nclient \u003d dataiku.api_client()\nproject \u003d client.get_default_project()\nvariables \u003d project.get_variables()\nage \u003d int(dataiku.get_custom_variables()[\"age\"])\n\n# Read recipe inputs\ndataset \u003d dataiku.Dataset(\"heart_disease_imputed_values\")\ndf \u003d dataset.get_dataframe()\n\ndf_filtered \u003d df[df[\u0027age\u0027] \u003d\u003d age]\ndf_by_location \u003d df_filtered.groupby(\u0027location\u0027)[\u0027chol\u0027].mean()\nhighest_chol \u003d df_by_location.idxmax()\n\nvariables[\u0027standard\u0027]___ \u003d ____ ## fix this line of code\nproject.set_variables(variables)",
+          "envSelection": {
+            "envMode": "INHERIT"
+          },
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_location_highest_cholesterol",
+        "type": "build_flowitem",
+        "name": "Highest Cholesterol Location",
+        "enabled": true,
+        "alwaysShowComment": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "location_highest_cholesterol",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "NON_RECURSIVE_FORCED_BUILD",
+          "autoUpdateSchemaBeforeEachRecipeRun": false,
+          "stopAtFlowZoneBoundary": false,
+          "refreshHiveMetastore": true,
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
+      }
+    ]
+  },
+  "automationLocal": false,
+  "customFields": {},
+  "markedAsTest": false
+}

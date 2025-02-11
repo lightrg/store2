@@ -1,0 +1,25 @@
+{
+  "type": "custom_python",
+  "name": "Retrieve metric",
+  "active": false,
+  "runAsUser": "quka183747@gmail.com",
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [],
+  "reporters": [],
+  "params": {
+    "envSelection": {
+      "envMode": "INHERIT"
+    }
+  },
+  "automationLocal": false,
+  "customFields": {},
+  "markedAsTest": false
+}
