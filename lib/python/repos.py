@@ -1,5 +1,4 @@
 import subprocess
-import os
 
 def get_git_commit_history(repo_path):
     """
@@ -15,13 +14,3 @@ def get_git_commit_history(repo_path):
         return commits
     else:
         raise Exception("Lỗi khi gọi git log: " + result.stderr)
-
-# Lấy repo path từ dự án hiện tại
-repo_path = os.getcwd()  # Sử dụng thư mục hiện tại làm repo path
-
-try:
-    commits = get_git_commit_history(repo_path)
-    for commit in commits:
-        print(commit)
-except Exception as e:
-    print("Error:", e)
