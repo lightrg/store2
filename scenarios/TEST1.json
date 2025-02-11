@@ -1,0 +1,29 @@
+{
+  "type": "step_based",
+  "name": "test1",
+  "active": false,
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "quka183747@gmail.com"
+    },
+    "lastModifiedOn": 1739258437115
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [],
+  "reporters": [],
+  "params": {
+    "steps": []
+  },
+  "automationLocal": false,
+  "customFields": {},
+  "markedAsTest": false
+}
