@@ -2,13 +2,6 @@
   "type": "step_based",
   "name": "test1",
   "active": false,
-  "creationTag": {
-    "versionNumber": 0,
-    "lastModifiedBy": {
-      "login": "quka183747@gmail.com"
-    },
-    "lastModifiedOn": 1739258437115
-  },
   "checklists": {
     "checklists": []
   },
@@ -21,7 +14,31 @@
   "triggers": [],
   "reporters": [],
   "params": {
-    "steps": []
+    "steps": [
+      {
+        "id": "custom_python_TEZJJDtf9Ii8NiAWbeCylQ",
+        "type": "custom_python",
+        "name": "Step #1",
+        "enabled": true,
+        "alwaysShowComment": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "script": "# Revert về commit cụ thể (thay COMMIT_HASH bằng hash mong muốn)\ngit checkout COMMIT_HASH -- .\ngit reset --hard COMMIT_HASH",
+          "envSelection": {
+            "envMode": "INHERIT"
+          },
+          "proceedOnFailure": false
+        }
+      }
+    ]
   },
   "automationLocal": false,
   "customFields": {},
