@@ -1,7 +1,15 @@
 {
-  "gitReferences": {},
+  "gitReferences": {
+    "store": {
+      "remote": "git@github.com:lightrg/store.git",
+      "checkout": "",
+      "remotePath": "",
+      "isDirty": false
+    }
+  },
   "pythonPath": [
-    "python"
+    "python",
+    "store"
   ],
   "rsrcPath": [
     "R"
