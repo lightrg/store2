@@ -67,7 +67,7 @@
   "schema": {
     "columns": [
       {"name":"timestamp","type":"string","comment":"","meaning":"Text","maxLength":1000},
-      {"name":"metric","type":"string","comment":"","maxLength":1000}
+      {"name":"metrics","type":"string"}
     ],
     "userModified": true
   },
