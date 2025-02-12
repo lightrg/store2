@@ -55,13 +55,7 @@
         "delayBetweenRetries": 10,
         "maxRetriesOnFail": 0,
         "params": {
-          "builds": [
-            {
-              "type": "DATASET",
-              "itemId": "location_highest_cholesterol",
-              "partitionsSpec": ""
-            }
-          ],
+          "builds": [],
           "jobType": "NON_RECURSIVE_FORCED_BUILD",
           "autoUpdateSchemaBeforeEachRecipeRun": false,
           "stopAtFlowZoneBoundary": false,
